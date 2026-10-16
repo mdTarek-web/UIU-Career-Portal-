@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UIU Career Portal | United International University</title>
+    <meta name="description" content="Official career services, internship placement, and employer engagement portal for United International University." />
+    <meta property="og:title" content="UIU Career Portal | United International University" />
+    <meta property="og:description" content="Official career services, internship placement, and employer engagement portal for United International University." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+  </head>
+  <body>
+    <!-- 1. TOP BLACK ROLE SWITCHER BAR -->
+    <aside class="top-role-bar" aria-label="Role Navigation Bar">
+      <div class="top-role-container">
+        <div class="role-brand-label">
+          <span class="pulse-dot"></span>
+          <span>UIU Portal Roles:</span>
+          <span id="active-role-indicator" style="color: #f97316; font-size: 0.75rem; text-transform: capitalize;">
+            Landing View
+          </span>
+        </div>
+        <div class="role-nav-tabs">
+          <button type="button" class="role-tab-btn active" data-role="landing" onclick="switchRole('landing')">
+            <span>🌐 Landing</span>
+          </button>
+          <button type="button" class="role-tab-btn" data-role="student" onclick="switchRole('student')">
+            <span>🎓 Student</span>
+          </button>
+          <button type="button" class="role-tab-btn" data-role="employer" onclick="switchRole('employer')">
+            <span>🏢 Employer</span>
+          </button>
+          <button type="button" class="role-tab-btn" data-role="admin" onclick="switchRole('admin')">
+            <span>🛡️ Admin</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. UNIFIED MAIN NAVBAR -->
+    <header class="main-navbar">
+      <div class="navbar-container">
+        <a href="#home" class="nav-brand" title="UIU Career Portal Homepage" onclick="switchRole('landing')">
+          <div class="brand-badge">UIU</div>
+          <div>
+            <div class="brand-title">UIU CAREER</div>
+            <div class="brand-sub" id="brand-role-sub">PORTAL</div>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#home" class="nav-link active" onclick="switchRole('landing')">Home</a>
+          <a href="#jobs" class="nav-link" onclick="switchRole('landing')">Jobs</a>
+          <a href="#companies" class="nav-link" onclick="switchRole('landing')">Companies</a>
+          <a href="#about" class="nav-link" onclick="switchRole('landing')">About</a>
+          <a href="#contact" class="nav-link" onclick="switchRole('landing')">Contact</a>
+          <a href="/index.php" class="nav-link" style="color: var(--primary); font-weight: 800;" title="Run Apache / PHP">
+            PHP Mode ↗
+          </a>
+        </nav>
+
+        <div class="nav-actions">
+          <button type="button" class="btn btn-outline" onclick="openLoginModal('student')">Login</button>
+          <button type="button" class="btn btn-primary" onclick="openRegisterModal('student')">Register</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. MAIN WORKSPACE CONTAINER -->
+    <div id="main-content-area">
+      <!-- 3A. PUBLIC LANDING VIEW -->
+      <div id="view-landing" class="role-view-section">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+          <div class="hero-grid">
+            <div>
+              <div class="hero-tag">
+                <span>✨</span>
+                <span>UIU Centre for Development of IT Professionals (CDIP) & Career Services</span>
+              </div>
+              <h1 class="hero-title">
+                Find Your Future.<br>
+                <span>Build Your Career.</span>
+              </h1>
+              <p class="hero-description">
+                Discover internships and graduate jobs from top verified companies. Empowering United International University students and alumni to excel in global tech and enterprise industries.
+              </p>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="#jobs" class="btn btn-primary" style="padding: 0.875rem 1.75rem; font-size: 1rem;">
+                  <span>Find Jobs</span>
+                  <span>&rarr;</span>
+                </a>
+                <a href="#companies" class="btn btn-outline" style="padding: 0.875rem 1.75rem; font-size: 1rem;">
+                  <span>Explore Companies</span>
+                </a>
+              </div>
+              <div style="display: flex; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.75rem; font-weight: 700; color: var(--slate-600); flex-wrap: wrap;">
+                <span>✓ Verified UIU Corporate MoUs</span>
+                <span>✓ Direct Recruiter Interviews</span>
+                <span>✓ ATS-Compliant Resume Builder</span>
+              </div>
+            </div>
+            <div style="text-align: center;">
+              <div style="background: linear-gradient(135deg, #fed7aa, #fdba74); padding: 1.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); border: 4px solid #ffffff;">
+                <div style="background-color: var(--slate-900); color: #ffffff; padding: 2rem; border-radius: var(--radius-md);">
+                  <div style="font-size: 0.8125rem; font-weight: 800; color: #f97316; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                    United International University
+                  </div>
+                  <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 1rem;">Official Career Portal</h3>
+                  <p style="color: var(--slate-300); font-size: 0.875rem; line-height: 1.6;">
+                    Direct campus recruitment gateway connecting students with verified corporate partners. Pure PHP, MySQL & Vanilla JS architecture.
+                  </p>
+                  <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 0.5rem;">
+                    <span class="badge badge-green">✓ Verified Portal</span>
+                    <span class="badge badge-orange">★ UIU CDIP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Metric Strip -->
+        <section class="stats-strip">
+          <div class="stats-grid">
+            <div>
+              <div class="stat-number">1,250+</div>
+              <div class="stat-label">Students Placed</div>
+              <div class="stat-sub">Across top multinationals & tech startups</div>
+            </div>
+            <div>
+              <div class="stat-number">85+</div>
+              <div class="stat-label">Partner Companies</div>
+              <div class="stat-sub">MoU signed corporate recruiters</div>
+            </div>
+            <div>
+              <div class="stat-number">120+</div>
+              <div class="stat-label">Active Openings</div>
+              <div class="stat-sub">Internships and graduate roles</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Featured Jobs on Homepage -->
+        <section id="jobs" class="section-wrapper">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Featured Jobs & Internships</h2>
+              <p class="section-subtitle">Live job vacancies and internships curated for UIU graduates</p>
+            </div>
+            <div id="landing-jobs-count" style="font-size: 0.875rem; font-weight: 700; color: var(--primary);">
+              Showing active jobs
+            </div>
+          </div>
+
+          <!-- Filter Control Card -->
+          <div class="filter-card">
+            <div class="search-input-wrapper">
+              <input 
+                type="text" 
+                id="landing-search-input" 
+                class="search-input" 
+                placeholder="Search jobs by title, company, skills (e.g. React, Java, Cloud)..."
+                oninput="filterLandingJobs()"
+              >
+            </div>
+            <select id="landing-dept-filter" class="filter-select" onchange="filterLandingJobs()">
+              <option value="All">All Departments</option>
+              <option value="CSE">CSE</option>
+              <option value="EEE">EEE</option>
+              <option value="BBA">BBA</option>
+            </select>
+            <select id="landing-type-filter" class="filter-select" onchange="filterLandingJobs()">
+              <option value="All">All Job Types</option>
+              <option value="Full-time">Full-time</option>
+              <option value="Internship">Internship</option>
+            </select>
+            <button type="button" class="btn btn-secondary" onclick="resetLandingFilters()">
+              Reset
+            </button>
+          </div>
+
+          <div id="landing-jobs-grid" class="cards-grid">
+            <!-- Dynamically populated via script.js -->
+          </div>
+        </section>
+
+        <!-- Partner Companies Section -->
+        <section id="companies" style="background-color: var(--slate-100); border-top: 1px solid var(--slate-200); padding: 4rem 1.25rem;">
+          <div style="max-width: 1280px; margin: 0 auto;">
+            <div class="section-head">
+              <div>
+                <h2 class="section-title">Partner Companies Directory</h2>
+                <p class="section-subtitle">Top multinational enterprises and software leaders hiring from UIU</p>
+              </div>
+            </div>
+            <div id="landing-companies-grid" class="cards-grid">
+              <!-- Dynamically populated via script.js -->
+            </div>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-wrapper" style="border-top: 1px solid var(--slate-200);">
+          <div style="max-width: 850px; margin: 0 auto; text-align: center;">
+            <span class="badge badge-orange" style="margin-bottom: 1rem;">Career Directorate</span>
+            <h2 class="section-title" style="margin-bottom: 1rem;">Empowering Tomorrow's Tech Leaders</h2>
+            <p style="color: var(--slate-600); font-size: 1.0625rem; line-height: 1.8;">
+              The United International University Career Portal is the centralized campus employment gateway. Established under the Centre for Development of IT Professionals (CDIP), our mission is to connect students with high-impact internships, global engineering vacancies, and executive placement opportunities.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- 3B. STUDENT PORTAL VIEW -->
+      <div id="view-student" class="role-view-section" style="display: none;">
+        <div class="portal-layout">
+          <aside class="portal-sidebar">
+            <div>
+              <div class="sidebar-brand">
+                <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: #fed7aa;">Student Portal</div>
+                <div style="font-size: 1.125rem; font-weight: 900;">Mugdha Rahman</div>
+                <div style="font-size: 0.75rem; color: #ffedd5;">ID: 011201049 • CSE-49</div>
+              </div>
+              <ul class="sidebar-menu">
+                <li><button type="button" class="sidebar-link active" onclick="switchStudentTab('dashboard')">📊 Dashboard</button></li>
+                <li><button type="button" class="sidebar-link" onclick="switchStudentTab('jobs')">💼 Browse Jobs</button></li>
+                <li><button type="button" class="sidebar-link" onclick="switchStudentTab('applications')">📄 My Applications</button></li>
+                <li><button type="button" class="sidebar-link" onclick="switchStudentTab('resume')">📝 Resume Builder</button></li>
+                <li><button type="button" class="sidebar-link" onclick="switchStudentTab('chat')">💬 Recruiter Chat</button></li>
+              </ul>
+            </div>
+            <div>
+              <button type="button" class="sidebar-link" style="color: #fecaca;" onclick="switchRole('landing')">🚪 Exit to Landing</button>
+            </div>
+          </aside>
+
+          <main class="portal-content">
+            <!-- Student Sub-view: Dashboard -->
+            <div id="student-tab-dashboard">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div>
+                  <h1 style="font-size: 2rem; font-weight: 900; color: var(--slate-900);">Student Career Dashboard</h1>
+                  <p style="color: var(--slate-500); font-size: 0.875rem;">Welcome back, Mugdha! Track your applications, interview invites, and formal offer letters.</p>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="switchStudentTab('resume')">
+                  Build ATS Resume
+                </button>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem;">
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Total Applied</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: var(--primary); margin-top: 0.25rem;" id="std-stat-applied">6</div>
+                </div>
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Shortlisted</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: #10b981; margin-top: 0.25rem;" id="std-stat-shortlisted">2</div>
+                </div>
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Upcoming Interviews</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: #3b82f6; margin-top: 0.25rem;">1</div>
+                </div>
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Selected / Offers</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: #8b5cf6; margin-top: 0.25rem;">1</div>
+                </div>
+              </div>
+
+              <!-- Applications Table -->
+              <div class="table-card">
+                <div style="padding: 1.25rem; border-bottom: 1px solid var(--slate-200); display: flex; justify-content: space-between; align-items: center;">
+                  <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--slate-900);">Active Job Applications</h3>
+                  <button type="button" onclick="switchStudentTab('applications')" style="color: var(--primary); font-size: 0.8125rem; font-weight: 700; background: none; border: none; cursor: pointer;">
+                    View All &rarr;
+                  </button>
+                </div>
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Role Title</th>
+                      <th>Company</th>
+                      <th>Status</th>
+                      <th>Interview Schedule</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="student-apps-table-body">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Student Sub-view: Jobs -->
+            <div id="student-tab-jobs" style="display: none;">
+              <h2 style="font-size: 1.75rem; font-weight: 900; color: var(--slate-900); margin-bottom: 1.5rem;">Browse & Apply for Positions</h2>
+              <div id="student-jobs-grid" class="cards-grid">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <!-- Student Sub-view: Applications -->
+            <div id="student-tab-applications" style="display: none;">
+              <h2 style="font-size: 1.75rem; font-weight: 900; color: var(--slate-900); margin-bottom: 1.5rem;">All Application Records</h2>
+              <div class="table-card">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Position</th>
+                      <th>Company</th>
+                      <th>Status</th>
+                      <th>Interview Details</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="student-all-apps-body">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Student Sub-view: Resume Builder -->
+            <div id="student-tab-resume" style="display: none;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2 style="font-size: 1.75rem; font-weight: 900; color: var(--slate-900);">ATS Resume Builder</h2>
+                <button type="button" class="btn btn-primary" onclick="window.print()">Print / Export PDF</button>
+              </div>
+              <div id="resume-paper" style="background: #ffffff; border: 1px solid var(--slate-300); border-radius: var(--radius-md); padding: 2.5rem; max-width: 800px; margin: 0 auto; box-shadow: var(--shadow-md);">
+                <div style="border-bottom: 2px solid var(--slate-900); padding-bottom: 1rem; text-align: center; margin-bottom: 1.5rem;">
+                  <h1 style="font-size: 1.875rem; font-weight: 900; color: var(--slate-900);">MUGDHA RAHMAN</h1>
+                  <p style="font-size: 0.875rem; color: var(--slate-600); margin-top: 0.25rem;">
+                    Dhaka, Bangladesh • +880 1712-345678 • mugdha.rahman@uiu.edu.bd • ID: 011201049
+                  </p>
+                </div>
+                <div style="margin-bottom: 1.25rem;">
+                  <h3 style="font-size: 1rem; font-weight: 800; color: var(--primary); text-transform: uppercase; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.25rem;">
+                    Education
+                  </h3>
+                  <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.875rem;">
+                    <div><strong>United International University (UIU)</strong><br>B.Sc in Computer Science & Engineering</div>
+                    <div style="text-align: right;"><strong>Expected: 2026</strong><br><span style="color: var(--primary); font-weight: 800;">CGPA: 3.75 / 4.00</span></div>
+                  </div>
+                </div>
+                <div style="margin-bottom: 1.25rem;">
+                  <h3 style="font-size: 1rem; font-weight: 800; color: var(--primary); text-transform: uppercase; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.25rem;">
+                    Technical Skills
+                  </h3>
+                  <p style="font-size: 0.875rem; color: var(--slate-700); margin-top: 0.5rem; line-height: 1.6;">
+                    PHP, MySQL, JavaScript (ES6+), React, Python, Java, C++, Docker, Git, REST APIs, TailwindCSS
+                  </p>
+                </div>
+                <div>
+                  <h3 style="font-size: 1rem; font-weight: 800; color: var(--primary); text-transform: uppercase; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.25rem;">
+                    Key Projects
+                  </h3>
+                  <div style="margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.6; color: var(--slate-700);">
+                    <strong>UIU Career & Internship Portal</strong> (PHP, MySQL, Vanilla JS)<br>
+                    Engineered complete role-based placement portal with applicant screening, offer letters, and analytics.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Student Sub-view: Chat -->
+            <div id="student-tab-chat" style="display: none;">
+              <h2 style="font-size: 1.75rem; font-weight: 900; color: var(--slate-900); margin-bottom: 1.5rem;">Direct Recruiter Chat</h2>
+              <div class="job-card" style="padding: 0; overflow: hidden; max-width: 800px; display: flex; flex-direction: column; height: 500px;">
+                <div style="padding: 1rem 1.5rem; background: var(--slate-900); color: #fff; display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <h3 style="font-size: 1rem; font-weight: 800;">TechFlow Solutions • Hiring Committee</h3>
+                    <p style="font-size: 0.75rem; color: #10b981;">● Recruiter Online</p>
+                  </div>
+                  <span class="badge badge-orange">SWE Intern Position</span>
+                </div>
+                <div id="student-chat-stream" style="flex: 1; padding: 1.5rem; overflow-y: auto; background-color: var(--slate-50); display: flex; flex-direction: column; gap: 1rem;">
+                  <!-- Chat messages -->
+                </div>
+                <form onsubmit="sendStudentMessage(event)" style="padding: 1rem; background: #fff; border-top: 1px solid var(--slate-200); display: flex; gap: 0.75rem;">
+                  <input type="text" id="student-msg-input" placeholder="Type message to hiring team..." class="search-input" style="flex: 1; padding-left: 1rem;" required>
+                  <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <!-- 3C. EMPLOYER PORTAL VIEW -->
+      <div id="view-employer" class="role-view-section" style="display: none;">
+        <div class="portal-layout">
+          <aside class="portal-sidebar" style="background: linear-gradient(180deg, #334155, #0f172a);">
+            <div>
+              <div class="sidebar-brand">
+                <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: #fed7aa;">Enterprise Hub</div>
+                <div style="font-size: 1.125rem; font-weight: 900;">TechFlow Solutions</div>
+                <div style="font-size: 0.75rem; color: #94a3b8;">Corporate MoU Partner</div>
+              </div>
+              <ul class="sidebar-menu">
+                <li><button type="button" class="sidebar-link active" onclick="switchEmployerTab('dashboard')">📊 Dashboard</button></li>
+                <li><button type="button" class="sidebar-link" onclick="switchEmployerTab('applicants')">👥 Candidate Applications</button></li>
+                <li><button type="button" class="sidebar-link" onclick="switchEmployerTab('post-job')">➕ Post New Job</button></li>
+              </ul>
+            </div>
+            <div>
+              <button type="button" class="sidebar-link" style="color: #fecaca;" onclick="switchRole('landing')">🚪 Exit to Landing</button>
+            </div>
+          </aside>
+
+          <main class="portal-content">
+            <!-- Employer Tab: Dashboard -->
+            <div id="employer-tab-dashboard">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div>
+                  <h1 style="font-size: 2rem; font-weight: 900; color: var(--slate-900);">Recruiter Workspace</h1>
+                  <p style="color: var(--slate-500); font-size: 0.875rem;">TechFlow Solutions campus hiring portal.</p>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="switchEmployerTab('post-job')">+ Post Opening</button>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem;">
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Active Jobs</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: var(--primary); margin-top: 0.25rem;">4</div>
+                </div>
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Total Applicants</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: #3b82f6; margin-top: 0.25rem;" id="emp-applicants-count">6</div>
+                </div>
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Shortlisted</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: #10b981; margin-top: 0.25rem;">2</div>
+                </div>
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Selected</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: #8b5cf6; margin-top: 0.25rem;">1</div>
+                </div>
+              </div>
+
+              <!-- Candidate Screening Table -->
+              <div class="table-card">
+                <div style="padding: 1.25rem; border-bottom: 1px solid var(--slate-200); display: flex; justify-content: space-between; align-items: center;">
+                  <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--slate-900);">Recent UIU Applicants</h3>
+                </div>
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>ID & Dept</th>
+                      <th>CGPA</th>
+                      <th>Applied Role</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="employer-applicants-table-body">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Employer Tab: Post Job -->
+            <div id="employer-tab-post-job" style="display: none;">
+              <h2 style="font-size: 1.75rem; font-weight: 900; color: var(--slate-900); margin-bottom: 1.5rem;">Create Opening</h2>
+              <div class="job-card" style="max-width: 800px; padding: 2rem;">
+                <form onsubmit="handleEmployerPostJob(event)" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                  <div>
+                    <label style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 0.25rem;">Job Title</label>
+                    <input type="text" id="post-job-title" class="search-input" required placeholder="e.g. Associate Cloud Developer" style="padding-left: 1rem;">
+                  </div>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                      <label style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 0.25rem;">Department</label>
+                      <select id="post-job-dept" class="filter-select" style="width: 100%;">
+                        <option value="CSE">CSE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="BBA">BBA</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 0.25rem;">Type</label>
+                      <select id="post-job-type" class="filter-select" style="width: 100%;">
+                        <option value="Full-time">Full-time</option>
+                        <option value="Internship">Internship</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 0.25rem;">Compensation</label>
+                    <input type="text" id="post-job-salary" class="search-input" required placeholder="e.g. BDT 45,000 /mo" style="padding-left: 1rem;">
+                  </div>
+                  <div>
+                    <label style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 0.25rem;">Required Skills</label>
+                    <input type="text" id="post-job-skills" class="search-input" required placeholder="e.g. Node.js, React, Docker" style="padding-left: 1rem;">
+                  </div>
+                  <div>
+                    <label style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 0.25rem;">Description</label>
+                    <textarea id="post-job-desc" rows="4" class="search-input" required placeholder="Describe duties and expectations..." style="padding: 1rem; width: 100%;"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Publish Opening</button>
+                </form>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <!-- 3D. ADMIN PORTAL VIEW -->
+      <div id="view-admin" class="role-view-section" style="display: none;">
+        <div class="portal-layout">
+          <aside class="portal-sidebar" style="background: linear-gradient(180deg, #ea580c, #9a3412);">
+            <div>
+              <div class="sidebar-brand">
+                <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: #fed7aa;">Admin Central</div>
+                <div style="font-size: 1.125rem; font-weight: 900;">Dr. Sarah Jenkins</div>
+                <div style="font-size: 0.75rem; color: #ffedd5;">Director, Career Services</div>
+              </div>
+              <ul class="sidebar-menu">
+                <li><button type="button" class="sidebar-link active" onclick="switchAdminTab('dashboard')">📊 Dashboard</button></li>
+                <li><button type="button" class="sidebar-link" onclick="switchAdminTab('companies')">🏢 Partner Verification</button></li>
+                <li><button type="button" class="sidebar-link" onclick="switchAdminTab('reports')">📑 Placement Reports</button></li>
+              </ul>
+            </div>
+            <div>
+              <button type="button" class="sidebar-link" style="color: #fecaca;" onclick="switchRole('landing')">🚪 Exit to Landing</button>
+            </div>
+          </aside>
+
+          <main class="portal-content">
+            <!-- Admin Tab: Dashboard -->
+            <div id="admin-tab-dashboard">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div>
+                  <h1 style="font-size: 2rem; font-weight: 900; color: var(--slate-900);">Career Directorate Central</h1>
+                  <p style="color: var(--slate-500); font-size: 0.875rem;">University-wide placement governance and partner verification.</p>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="switchAdminTab('reports')">Generate Audit PDF</button>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem;">
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Total Placed</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: var(--primary); margin-top: 0.25rem;">1,250+</div>
+                </div>
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Placement Rate (CSE)</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: #10b981; margin-top: 0.25rem;">94.2%</div>
+                </div>
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Corporate Partners</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: #3b82f6; margin-top: 0.25rem;">85+</div>
+                </div>
+                <div class="job-card" style="padding: 1.25rem;">
+                  <span style="font-size: 0.75rem; font-weight: 800; color: var(--slate-500); text-transform: uppercase;">Pending Approvals</span>
+                  <div style="font-size: 2rem; font-weight: 900; color: #f59e0b; margin-top: 0.25rem;" id="admin-pending-count">1</div>
+                </div>
+              </div>
+
+              <div class="table-card">
+                <div style="padding: 1.25rem; border-bottom: 1px solid var(--slate-200);">
+                  <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--slate-900);">Pending Corporate Registrations</h3>
+                </div>
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Company</th>
+                      <th>Sector</th>
+                      <th>Location</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-pending-table-body">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Admin Tab: Reports -->
+            <div id="admin-tab-reports" style="display: none;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2 style="font-size: 1.75rem; font-weight: 900; color: var(--slate-900);">Annual Placement Dossier</h2>
+                <button type="button" class="btn btn-primary" onclick="window.print()">Download / Print Report</button>
+              </div>
+              <div id="admin-report-paper" style="background: #ffffff; border: 1px solid var(--slate-300); border-radius: var(--radius-md); padding: 3rem; max-width: 800px; margin: 0 auto; box-shadow: var(--shadow-md);">
+                <div style="border-bottom: 3px solid #ea580c; padding-bottom: 1rem; text-align: center; margin-bottom: 1.5rem;">
+                  <h2 style="font-size: 1.5rem; font-weight: 900; color: var(--slate-900);">UNITED INTERNATIONAL UNIVERSITY</h2>
+                  <p style="font-size: 0.8125rem; font-weight: 800; color: #ea580c; text-transform: uppercase;">
+                    Centre for Development of IT Professionals (CDIP) & Directorate of Career Services
+                  </p>
+                  <p style="font-size: 0.75rem; color: var(--slate-500);">Academic Placement & Employability Audit 2026</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin-bottom: 1.5rem;">
+                  <div style="background: var(--slate-50); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--slate-200);">
+                    <div style="font-size: 1.5rem; font-weight: 900; color: var(--primary);">1,250+</div>
+                    <div style="font-size: 0.75rem; font-weight: 700;">Hires Confirmed</div>
+                  </div>
+                  <div style="background: var(--slate-50); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--slate-200);">
+                    <div style="font-size: 1.5rem; font-weight: 900; color: #10b981;">94.2%</div>
+                    <div style="font-size: 0.75rem; font-weight: 700;">CSE Conversion</div>
+                  </div>
+                  <div style="background: var(--slate-50); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--slate-200);">
+                    <div style="font-size: 1.5rem; font-weight: 900; color: #3b82f6;">BDT 64k</div>
+                    <div style="font-size: 0.75rem; font-weight: 700;">Average Salary</div>
+                  </div>
+                </div>
+                <p style="font-size: 0.875rem; line-height: 1.6; color: var(--slate-700);">
+                  This annual report certifies graduate placements vetted under the university's fair compensation standards. Top hiring partners include Brain Station 23, TechFlow Solutions, Therap Services, BRAC IT Services, and Samsung R&D Bangladesh.
+                </p>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. MODALS -->
+    <!-- Login / Registration Modal -->
+    <div id="login-modal" class="modal-overlay" style="display: none;">
+      <div class="modal-box">
+        <button type="button" onclick="closeModal('login-modal')" style="position: absolute; right: 1.25rem; top: 1.25rem; background: none; border: none; font-size: 1.25rem; font-weight: 800; cursor: pointer;">✕</button>
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <div class="brand-badge" style="margin: 0 auto 0.75rem; width: 2.75rem; height: 2.75rem;">UIU</div>
+          <h2 style="font-size: 1.5rem; font-weight: 900; color: var(--slate-900);">Portal Sign In</h2>
+          <p style="font-size: 0.8125rem; color: var(--slate-500);">Select role and sign in with university credentials</p>
+        </div>
+        <form onsubmit="handleModalLogin(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div>
+            <label style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 0.25rem;">Role</label>
+            <select id="modal-role-select" class="filter-select" style="width: 100%;">
+              <option value="student">🎓 Student</option>
+              <option value="employer">🏢 Employer / Company</option>
+              <option value="admin">🛡️ Career Office Admin</option>
+            </select>
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 0.25rem;">Email Address</label>
+            <input type="email" id="modal-email-input" required value="mugdha.rahman@uiu.edu.bd" class="search-input" style="padding-left: 1rem;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 0.25rem;">Password</label>
+            <input type="password" id="modal-pass-input" required value="demo1234" class="search-input" style="padding-left: 1rem;">
+          </div>
+          <button type="submit" class="btn btn-primary" style="padding: 0.75rem; margin-top: 0.5rem;">
+            Sign In to Selected Role
+          </button>
+        </form>
+        <div style="margin-top: 1.25rem; text-align: center; font-size: 0.8125rem; color: var(--slate-600);">
+          Don't have an account yet? 
+          <button type="button" onclick="closeModal('login-modal'); openRegisterModal('student');" style="background: none; border: none; color: var(--primary); font-weight: 800; cursor: pointer; text-decoration: underline;">
+            Create one here &rarr;
+          </button>
+        </div>
+        <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--slate-200); font-size: 0.75rem; text-align: center; color: var(--slate-500);">
+          Demo Password: <strong>demo1234</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="register-modal" class="modal-overlay" style="display: none;">
+      <div class="modal-box" style="max-width: 540px;">
+        <button type="button" onclick="closeModal('register-modal')" style="position: absolute; right: 1.25rem; top: 1.25rem; background: none; border: none; font-size: 1.25rem; font-weight: 800; cursor: pointer;">✕</button>
+        <div style="text-align: center; margin-bottom: 1.25rem;">
+          <div class="brand-badge" style="margin: 0 auto 0.5rem; width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">UIU</div>
+          <h2 style="font-size: 1.5rem; font-weight: 900; color: var(--slate-900);">Create an Account</h2>
+          <p style="font-size: 0.8125rem; color: var(--slate-500);">Register to access UIU career and recruitment services</p>
+        </div>
+
+        <!-- Account Type Switcher -->
+        <div style="display: flex; gap: 0.5rem; background: var(--slate-100); padding: 0.35rem; border-radius: var(--radius-md); margin-bottom: 1.25rem;">
+          <button type="button" id="reg-tab-student" class="btn btn-primary btn-sm" style="flex: 1; border: none;" onclick="switchRegisterType('student')">
+            🎓 Student
+          </button>
+          <button type="button" id="reg-tab-employer" class="btn btn-outline btn-sm" style="flex: 1; border: none;" onclick="switchRegisterType('employer')">
+            🏢 Employer
+          </button>
+        </div>
+
+        <div id="reg-error-banner" class="alert alert-error" style="display: none; margin-bottom: 0.75rem; font-size: 0.8125rem;"></div>
+
+        <form id="register-form" onsubmit="handleModalRegister(event)" style="display: flex; flex-direction: column; gap: 0.85rem;">
+          <input type="hidden" id="reg-role-type" value="student">
+          
+          <!-- Student Form Fields -->
+          <div id="reg-student-section" style="display: flex; flex-direction: column; gap: 0.85rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <div>
+                <label style="display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.25rem; text-transform: uppercase;">Full Name *</label>
+                <input type="text" id="reg-student-name" placeholder="e.g. Anika Tabassum" class="search-input" style="padding-left: 0.75rem;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.25rem; text-transform: uppercase;">Student ID *</label>
+                <input type="text" id="reg-student-id" placeholder="e.g. 011211055" class="search-input" style="padding-left: 0.75rem;">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <div>
+                <label style="display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.25rem; text-transform: uppercase;">Department *</label>
+                <select id="reg-student-dept" class="filter-select" style="width: 100%;">
+                  <option value="CSE">CSE</option>
+                  <option value="EEE">EEE</option>
+                  <option value="BBA">BBA</option>
+                  <option value="Data Science">Data Science</option>
+                  <option value="Civil">Civil</option>
+                </select>
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.25rem; text-transform: uppercase;">Batch *</label>
+                <input type="text" id="reg-student-batch" placeholder="e.g. CSE-51" class="search-input" style="padding-left: 0.75rem;">
+              </div>
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.25rem; text-transform: uppercase;">Current CGPA *</label>
+              <input type="number" step="0.01" min="0" max="4.00" id="reg-student-cgpa" placeholder="3.80" class="search-input" style="padding-left: 0.75rem;" value="3.80">
+            </div>
+          </div>
+
+          <!-- Employer Form Fields -->
+          <div id="reg-employer-section" style="display: none; flex-direction: column; gap: 0.85rem;">
+            <div>
+              <label style="display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.25rem; text-transform: uppercase;">Company Name *</label>
+              <input type="text" id="reg-company-name" placeholder="e.g. Brain Station 23" class="search-input" style="padding-left: 0.75rem;">
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <div>
+                <label style="display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.25rem; text-transform: uppercase;">Industry / Domain *</label>
+                <input type="text" id="reg-company-sector" placeholder="e.g. FinTech & Security" class="search-input" style="padding-left: 0.75rem;" value="Software & IT">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.25rem; text-transform: uppercase;">Location *</label>
+                <input type="text" id="reg-company-location" placeholder="e.g. Gulshan-2, Dhaka" class="search-input" style="padding-left: 0.75rem;" value="Dhaka, Bangladesh">
+              </div>
+            </div>
+          </div>
+
+          <!-- Common Email and Password -->
+          <div>
+            <label style="display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.25rem; text-transform: uppercase;">Email Address *</label>
+            <input type="email" id="reg-email" required placeholder="name@domain.edu.bd or corporate email" class="search-input" style="padding-left: 0.75rem;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.25rem; text-transform: uppercase;">Password *</label>
+            <input type="password" id="reg-password" required minlength="6" placeholder="Create password (min 6 characters)" class="search-input" style="padding-left: 0.75rem;">
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="padding: 0.85rem; margin-top: 0.5rem; font-size: 0.95rem;">
+            Complete Registration &rarr;
+          </button>
+        </form>
+
+        <div style="margin-top: 1.25rem; padding-top: 0.75rem; border-top: 1px solid var(--slate-200); font-size: 0.8125rem; text-align: center; color: var(--slate-600);">
+          Already have an account? 
+          <button type="button" onclick="closeModal('register-modal'); openLoginModal('student');" style="background: none; border: none; color: var(--primary); font-weight: 800; cursor: pointer; text-decoration: underline;">
+            Sign In here
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offer Letter Modal -->
+    <div id="offer-modal" class="modal-overlay" style="display: none;">
+      <div class="modal-box" style="max-width: 650px;">
+        <button type="button" onclick="closeModal('offer-modal')" style="position: absolute; right: 1.25rem; top: 1.25rem; background: none; border: none; font-size: 1.25rem; font-weight: 800; cursor: pointer;">✕</button>
+        <div style="border-bottom: 2px solid var(--primary); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+          <span class="badge badge-green">Official Appointment Letter</span>
+          <h2 style="font-size: 1.5rem; font-weight: 900; margin-top: 0.5rem; color: var(--slate-900);">TechFlow Solutions Ltd.</h2>
+          <p style="font-size: 0.8125rem; color: var(--slate-500);">UIU Corporate Partner • Verified Credential</p>
+        </div>
+        <div style="font-size: 0.875rem; line-height: 1.7; color: var(--slate-700);">
+          <p>Dear Mugdha Rahman (ID: 011201049),</p>
+          <p style="margin-top: 0.5rem;">
+            We are pleased to formally offer you the position of <strong>Software Engineering Intern</strong>.
+          </p>
+          <div style="background: var(--slate-50); padding: 1rem; border-radius: var(--radius-sm); margin: 1rem 0; border: 1px solid var(--slate-200);">
+            <strong>Stipend:</strong> BDT 20,000 / month<br>
+            <strong>Mode:</strong> Hybrid (Banani HQ + Remote)<br>
+            <strong>Commencement Date:</strong> November 1, 2026
+          </div>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('offer-modal')">Close</button>
+          <button type="button" class="btn btn-primary" onclick="window.print()">Download / Print PDF</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. SHARED SCRIPT -->
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/src/js/script.js"></script>
+    <script>
+      // Immediate non-blocking notification helper
+      window.showToast = window.showToast || function(message, type = 'info') {
+        let container = document.getElementById('toast-container');
+        if (!container) {
+          container = document.createElement('div');
+          container.id = 'toast-container';
+          container.className = 'toast-container';
+          document.body.appendChild(container);
+        }
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        const icon = type === 'success' ? '✓' : type === 'error' ? '⚠️' : 'ℹ️';
+        toast.innerHTML = `<span>${icon}</span><span>${message}</span>`;
+        container.appendChild(toast);
+        setTimeout(() => {
+          toast.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateY(10px)';
+          setTimeout(() => toast.remove(), 300);
+        }, 3500);
+      };
+
+      // Initial state & role routing for Vanilla JS SPA preview
+      const DATA_JOBS = [
+        {
+          id: 1,
+          title: 'Software Engineering Intern',
+          company: 'TechFlow Solutions',
+          department: 'CSE',
+          type: 'Internship',
+          workplace: 'Hybrid',
+          location: 'Banani, Dhaka',
+          salary: 'BDT 20,000 /mo',
+          deadline: '2026-12-31',
+          skills: ['JavaScript', 'React', 'Node.js', 'Git'],
+          description: 'Join our core platform engineering team working on scalable cloud microservices. Dedicated senior mentorship provided.'
+        },
+        {
+          id: 2,
+          title: 'Associate Software Engineer (Full Stack)',
+          company: 'Brain Station 23',
+          department: 'CSE',
+          type: 'Full-time',
+          workplace: 'On-site',
+          location: 'Mohakhali DOHS, Dhaka',
+          salary: 'BDT 55,000 - 75,000 /mo',
+          deadline: '2026-11-30',
+          skills: ['Java', 'Spring Boot', 'MySQL', 'REST API'],
+          description: 'Exciting opening for ambitious graduating students and fresh alumni to build enterprise FinTech solutions.'
+        },
+        {
+          id: 3,
+          title: 'Junior Cloud & DevOps Engineer',
+          company: 'BRAC IT Services',
+          department: 'CSE',
+          type: 'Full-time',
+          workplace: 'Hybrid',
+          location: 'Gulshan-1, Dhaka',
+          salary: 'BDT 60,000 /mo',
+          deadline: '2026-11-15',
+          skills: ['Docker', 'Linux', 'AWS', 'Python'],
+          description: 'Support high-availability microfinance cloud infrastructure serving millions of daily mobile users.'
+        },
+        {
+          id: 4,
+          title: 'Quality Assurance (QA) Intern',
+          company: 'Therap Services',
+          department: 'CSE',
+          type: 'Internship',
+          workplace: 'On-site',
+          location: 'Baridhara, Dhaka',
+          salary: 'BDT 22,000 /mo',
+          deadline: '2026-12-20',
+          skills: ['Selenium', 'Manual Testing', 'SQL', 'JIRA'],
+          description: 'Learn test automation and QA methodologies in a multinational healthcare SaaS environment.'
+        }
+      ];
+
+      const DATA_COMPANIES = [
+        { id: 1, name: 'TechFlow Solutions', sector: 'Software & IT', location: 'Banani, Dhaka', health: 96, openings: 4 },
+        { id: 2, name: 'Brain Station 23', sector: 'Software & IT', location: 'Mohakhali DOHS, Dhaka', health: 98, openings: 5 },
+        { id: 3, name: 'BRAC IT Services', sector: 'Financial Technology', location: 'Gulshan-1, Dhaka', health: 94, openings: 2 },
+        { id: 4, name: 'Therap Services', sector: 'Healthcare Software', location: 'Baridhara, Dhaka', health: 97, openings: 3 }
+      ];
+
+      let studentApplications = [
+        { id: 1, jobId: 1, title: 'Software Engineering Intern', company: 'TechFlow Solutions', status: 'Shortlisted', interview: 'Thursday, 2:00 PM (Google Meet)' },
+        { id: 2, jobId: 2, title: 'Associate Software Engineer', company: 'Brain Station 23', status: 'Under Review', interview: 'In Review' }
+      ];
+
+      let chatMessages = [
+        { sender: 'TechFlow Solutions', text: 'Hello Mugdha! Congratulations on being shortlisted for the Software Engineering Intern opening.' },
+        { sender: 'Mugdha Rahman', text: 'Thank you so much! I am very excited and preparing for the technical interview.' },
+        { sender: 'TechFlow Solutions', text: 'We look forward to meeting you on Thursday at 2:00 PM via Google Meet.' }
+      ];
+
+      function renderLanding() {
+        const grid = document.getElementById('landing-jobs-grid');
+        const compGrid = document.getElementById('landing-companies-grid');
+        if (!grid || !compGrid) return;
+
+        grid.innerHTML = DATA_JOBS.map(j => `
+          <article class="job-card">
+            <div>
+              <div class="card-top">
+                <span class="badge ${j.type === 'Internship' ? 'badge-blue' : 'badge-orange'}">${j.type}</span>
+                <span class="badge badge-gray">${j.department}</span>
+              </div>
+              <h3 class="job-title">${j.title}</h3>
+              <div class="company-name">${j.company}</div>
+              <p style="font-size: 0.8125rem; color: var(--slate-500); margin: 0.5rem 0;">📍 ${j.location} (${j.workplace})</p>
+              <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.5;">${j.description}</p>
+              <div class="skills-list">
+                ${j.skills.map(s => `<span class="skill-tag">${s}</span>`).join('')}
+              </div>
+            </div>
+            <div class="card-footer">
+              <div>
+                <div style="font-size: 0.9375rem; font-weight: 800; color: var(--slate-900);">${j.salary}</div>
+                <div style="font-size: 0.6875rem; color: var(--slate-400);">Deadline: ${j.deadline}</div>
+              </div>
+              <button type="button" class="btn btn-primary" style="padding: 0.4rem 0.875rem; font-size: 0.75rem;" onclick="applyFromLanding(${j.id})">
+                Apply Now
+              </button>
+            </div>
+          </article>
+        `).join('');
+
+        compGrid.innerHTML = DATA_COMPANIES.map(c => `
+          <article class="job-card">
+            <div class="card-top">
+              <span class="badge badge-green">✓ MoU Partner</span>
+              <span class="badge badge-orange">Rating: ${c.health}%</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 900; color: var(--slate-900);">${c.name}</h3>
+            <p style="font-size: 0.875rem; color: var(--primary); font-weight: 700; margin-top: 0.25rem;">${c.sector}</p>
+            <p style="font-size: 0.8125rem; color: var(--slate-500); margin: 0.25rem 0;">📍 ${c.location}</p>
+            <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--slate-100); display: flex; justify-content: space-between; align-items: center; font-size: 0.8125rem;">
+              <span><strong>${c.openings}</strong> Openings</span>
+              <a href="#jobs" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">View Roles</a>
+            </div>
+          </article>
+        `).join('');
+
+        renderStudentApps();
+        renderEmployerScreening();
+        renderChatMessages();
+      }
+
+      function renderStudentApps() {
+        const body = document.getElementById('student-apps-table-body');
+        const allBody = document.getElementById('student-all-apps-body');
+        const html = studentApplications.map(a => `
+          <tr>
+            <td style="font-weight: 800;">${a.title}</td>
+            <td>${a.company}</td>
+            <td><span class="badge ${a.status === 'Shortlisted' ? 'badge-green' : 'badge-orange'}">${a.status}</span></td>
+            <td>${a.interview}</td>
+            <td>
+              ${a.status === 'Shortlisted' 
+                ? `<button type="button" class="btn btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;" onclick="openModal('offer-modal')">View Offer</button>` 
+                : `<span style="color: var(--slate-400); font-size: 0.75rem;">In Review</span>`}
+            </td>
+          </tr>
+        `).join('');
+        if (body) body.innerHTML = html;
+        if (allBody) allBody.innerHTML = html;
+      }
+
+      function renderEmployerScreening() {
+        const body = document.getElementById('employer-applicants-table-body');
+        const adminBody = document.getElementById('admin-pending-table-body');
+        if (body) {
+          body.innerHTML = `
+            <tr>
+              <td style="font-weight: 800;">Mugdha Rahman</td>
+              <td>011201049 • CSE</td>
+              <td style="font-weight: 800; color: var(--primary);">3.75</td>
+              <td>Software Engineering Intern</td>
+              <td><span class="badge badge-green">Shortlisted</span></td>
+              <td><button type="button" class="btn btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;" onclick="showToast('Applicant profile: Mugdha Rahman (011201049, CGPA: 3.75)', 'info')">View Profile</button></td>
+            </tr>
+            <tr>
+              <td style="font-weight: 800;">Tahsin Ahmed</td>
+              <td>011201088 • CSE</td>
+              <td style="font-weight: 800; color: var(--primary);">3.82</td>
+              <td>Associate Software Engineer</td>
+              <td><span class="badge badge-orange">Under Review</span></td>
+              <td><button type="button" class="btn btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;" onclick="showToast('Tahsin Ahmed shortlisted for technical round!', 'success')">Shortlist</button></td>
+            </tr>
+          `;
+        }
+        if (adminBody) {
+          adminBody.innerHTML = `
+            <tr>
+              <td style="font-weight: 800;">DataNex AI Technologies</td>
+              <td>AI & Cloud Platforms</td>
+              <td>Gulshan-2, Dhaka</td>
+              <td><span class="badge badge-orange">Pending Review</span></td>
+              <td><button type="button" class="btn btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;" onclick="showToast('DataNex AI verified and approved!', 'success')">Approve</button></td>
+            </tr>
+          `;
+        }
+      }
+
+      function renderChatMessages() {
+        const stream = document.getElementById('student-chat-stream');
+        if (!stream) return;
+        stream.innerHTML = chatMessages.map(m => {
+          const isMine = m.sender === 'Mugdha Rahman';
+          return `
+            <div style="align-self: ${isMine ? 'flex-end' : 'flex-start'}; max-width: 75%;">
+              <div style="font-size: 0.6875rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.25rem; text-align: ${isMine ? 'right' : 'left'};">
+                ${m.sender}
+              </div>
+              <div style="background-color: ${isMine ? 'var(--primary)' : '#ffffff'}; color: ${isMine ? '#ffffff' : 'var(--slate-800)'}; padding: 0.75rem 1rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: ${isMine ? 'none' : '1px solid var(--slate-200)'}; font-size: 0.875rem; line-height: 1.5;">
+                ${m.text}
+              </div>
+            </div>
+          `;
+        }).join('');
+        stream.scrollTop = stream.scrollHeight;
+      }
+
+      function sendStudentMessage(e) {
+        e.preventDefault();
+        const input = document.getElementById('student-msg-input');
+        const text = input.value.trim();
+        if (!text) return;
+        chatMessages.push({ sender: 'Mugdha Rahman', text: text });
+        input.value = '';
+        renderChatMessages();
+
+        // Auto recruiter response
+        setTimeout(() => {
+          chatMessages.push({ sender: 'TechFlow Solutions', text: 'Thank you for your response, Mugdha! We have updated your file with the hiring committee.' });
+          renderChatMessages();
+        }, 1200);
+      }
+
+      function switchRole(role) {
+        document.querySelectorAll('.role-view-section').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.role-tab-btn').forEach(btn => btn.classList.remove('active'));
+
+        const targetBtn = document.querySelector(`.role-tab-btn[data-role="${role}"]`);
+        if (targetBtn) targetBtn.classList.add('active');
+
+        const indicator = document.getElementById('active-role-indicator');
+        const brandSub = document.getElementById('brand-role-sub');
+
+        if (role === 'landing') {
+          document.getElementById('view-landing').style.display = 'block';
+          if (indicator) indicator.textContent = 'Landing View';
+          if (brandSub) brandSub.textContent = 'PORTAL';
+          window.location.hash = '';
+        } else if (role === 'student') {
+          document.getElementById('view-student').style.display = 'block';
+          if (indicator) indicator.textContent = 'Student View';
+          if (brandSub) brandSub.textContent = 'PORTAL • STUDENT';
+          window.location.hash = '#student';
+        } else if (role === 'employer') {
+          document.getElementById('view-employer').style.display = 'block';
+          if (indicator) indicator.textContent = 'Employer View';
+          if (brandSub) brandSub.textContent = 'PORTAL • EMPLOYER';
+          window.location.hash = '#employer';
+        } else if (role === 'admin') {
+          document.getElementById('view-admin').style.display = 'block';
+          if (indicator) indicator.textContent = 'Admin View';
+          if (brandSub) brandSub.textContent = 'PORTAL • ADMIN';
+          window.location.hash = '#admin';
+        }
+      }
+
+      function switchStudentTab(tab) {
+        ['dashboard', 'jobs', 'applications', 'resume', 'chat'].forEach(t => {
+          const el = document.getElementById(`student-tab-${t}`);
+          if (el) el.style.display = (t === tab) ? 'block' : 'none';
+        });
+      }
+
+      function switchEmployerTab(tab) {
+        ['dashboard', 'post-job'].forEach(t => {
+          const el = document.getElementById(`employer-tab-${tab}`);
+          if (el) el.style.display = (t === tab) ? 'block' : 'none';
+        });
+      }
+
+      function switchAdminTab(tab) {
+        ['dashboard', 'reports'].forEach(t => {
+          const el = document.getElementById(`admin-tab-${tab}`);
+          if (el) el.style.display = (t === tab) ? 'block' : 'none';
+        });
+      }
+
+      function applyFromLanding(jobId) {
+        switchRole('student');
+        switchStudentTab('applications');
+        const existing = studentApplications.find(a => a.jobId === jobId);
+        if (!existing) {
+          const job = DATA_JOBS.find(j => j.id === jobId);
+          studentApplications.unshift({
+            id: Date.now(),
+            jobId: jobId,
+            title: job.title,
+            company: job.company,
+            status: 'Applied',
+            interview: 'Under Review'
+          });
+          renderStudentApps();
+          showToast(`Application submitted for ${job.title} at ${job.company}!`, 'success');
+        } else {
+          showToast('You have already applied for this position.', 'error');
+        }
+      }
+
+      function handleEmployerPostJob(e) {
+        e.preventDefault();
+        const title = document.getElementById('post-job-title').value;
+        const dept = document.getElementById('post-job-dept').value;
+        const type = document.getElementById('post-job-type').value;
+        const salary = document.getElementById('post-job-salary').value;
+        const skills = document.getElementById('post-job-skills').value.split(',').map(s => s.trim());
+        const desc = document.getElementById('post-job-desc').value;
+
+        DATA_JOBS.unshift({
+          id: Date.now(),
+          title: title,
+          company: 'TechFlow Solutions',
+          department: dept,
+          type: type,
+          workplace: 'Hybrid',
+          location: 'Banani, Dhaka',
+          salary: salary,
+          deadline: '2026-12-31',
+          skills: skills,
+          description: desc
+        });
+
+        showToast(`Job "${title}" successfully published and submitted for verification!`, 'success');
+        switchEmployerTab('dashboard');
+        renderLanding();
+      }
+
+      function openLoginModal(role) {
+        const select = document.getElementById('modal-role-select');
+        if (select) select.value = role;
+        openModal('login-modal');
+      }
+
+      function handleModalLogin(e) {
+        e.preventDefault();
+        const role = document.getElementById('modal-role-select').value;
+        closeModal('login-modal');
+        switchRole(role);
+        showToast(`Signed in successfully as ${role.toUpperCase()}!`, 'success');
+      }
+
+      function openRegisterModal(type = 'student') {
+        switchRegisterType(type);
+        openModal('register-modal');
+      }
+
+      function switchRegisterType(type) {
+        document.getElementById('reg-role-type').value = type;
+        const studentSec = document.getElementById('reg-student-section');
+        const empSec = document.getElementById('reg-employer-section');
+        const tabStudent = document.getElementById('reg-tab-student');
+        const tabEmp = document.getElementById('reg-tab-employer');
+        const errBanner = document.getElementById('reg-error-banner');
+        if (errBanner) {
+          errBanner.style.display = 'none';
+          errBanner.textContent = '';
+        }
+
+        const studentInputs = [
+          document.getElementById('reg-student-name'),
+          document.getElementById('reg-student-id'),
+          document.getElementById('reg-student-batch'),
+          document.getElementById('reg-student-cgpa')
+        ];
+        const empInputs = [
+          document.getElementById('reg-company-name')
+        ];
+
+        if (type === 'student') {
+          if (studentSec) studentSec.style.display = 'flex';
+          if (empSec) empSec.style.display = 'none';
+          if (tabStudent) tabStudent.className = 'btn btn-primary btn-sm';
+          if (tabEmp) tabEmp.className = 'btn btn-outline btn-sm';
+          studentInputs.forEach(inp => { if (inp) inp.required = true; });
+          empInputs.forEach(inp => { if (inp) inp.required = false; });
+        } else {
+          if (studentSec) studentSec.style.display = 'none';
+          if (empSec) empSec.style.display = 'flex';
+          if (tabStudent) tabStudent.className = 'btn btn-outline btn-sm';
+          if (tabEmp) tabEmp.className = 'btn btn-primary btn-sm';
+          studentInputs.forEach(inp => { if (inp) inp.required = false; });
+          empInputs.forEach(inp => { if (inp) inp.required = true; });
+        }
+      }
+
+      function handleModalRegister(e) {
+        e.preventDefault();
+        const role = document.getElementById('reg-role-type').value;
+        const email = (document.getElementById('reg-email')?.value || '').trim();
+        const password = (document.getElementById('reg-password')?.value || '').trim();
+        const errBanner = document.getElementById('reg-error-banner');
+
+        if (!email || !password) {
+          if (errBanner) {
+            errBanner.textContent = 'Please provide both email and password.';
+            errBanner.style.display = 'block';
+          }
+          return;
+        }
+
+        if (password.length < 6) {
+          if (errBanner) {
+            errBanner.textContent = 'Password must be at least 6 characters long.';
+            errBanner.style.display = 'block';
+          }
+          return;
+        }
+
+        if (role === 'student') {
+          const name = (document.getElementById('reg-student-name')?.value || '').trim();
+          const studentId = (document.getElementById('reg-student-id')?.value || '').trim();
+          const dept = document.getElementById('reg-student-dept')?.value || 'CSE';
+          const batch = (document.getElementById('reg-student-batch')?.value || '').trim() || 'CSE-51';
+          const cgpa = (document.getElementById('reg-student-cgpa')?.value || '').trim() || '3.75';
+
+          if (!name) {
+            if (errBanner) {
+              errBanner.textContent = 'Please enter your Full Name.';
+              errBanner.style.display = 'block';
+            }
+            return;
+          }
+          if (!studentId) {
+            if (errBanner) {
+              errBanner.textContent = 'Please enter your UIU Student ID (e.g. 011211055).';
+              errBanner.style.display = 'block';
+            }
+            return;
+          }
+
+          // Update student display in UI
+          const sideName = document.querySelector('#view-student .sidebar-brand div:nth-child(2)');
+          if (sideName) sideName.textContent = name;
+          const sideSub = document.querySelector('#view-student .sidebar-brand div:nth-child(3)');
+          if (sideSub) sideSub.textContent = `ID: ${studentId} • ${batch}`;
+
+          const dashGreeting = document.querySelector('#student-tab-dashboard p');
+          if (dashGreeting) dashGreeting.textContent = `Welcome, ${name}! Your student profile has been created successfully.`;
+
+          if (errBanner) errBanner.style.display = 'none';
+          closeModal('register-modal');
+          showToast(`Welcome, ${name}! Student registration completed successfully.`, 'success');
+          switchRole('student');
+        } else {
+          const compName = (document.getElementById('reg-company-name')?.value || '').trim();
+          const sector = (document.getElementById('reg-company-sector')?.value || '').trim() || 'Software & IT';
+          const loc = (document.getElementById('reg-company-location')?.value || '').trim() || 'Dhaka, Bangladesh';
+
+          if (!compName) {
+            if (errBanner) {
+              errBanner.textContent = 'Please enter your Company / Organization Name.';
+              errBanner.style.display = 'block';
+            }
+            return;
+          }
+
+          // Add to admin pending companies list in preview
+          const adminBody = document.getElementById('admin-pending-table-body');
+          if (adminBody) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+              <td style="font-weight: 800;">${compName}</td>
+              <td>${sector}</td>
+              <td>${loc}</td>
+              <td><span class="badge badge-orange">Pending Review</span></td>
+              <td><button type="button" class="btn btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;" onclick="showToast('${compName} approved!', 'success'); this.parentElement.innerHTML='<span class=\"badge badge-green\">Approved</span>';">Approve</button></td>
+            `;
+            adminBody.prepend(tr);
+          }
+
+          // Update employer portal brand
+          const compBrand = document.querySelector('#view-employer .sidebar-brand div:nth-child(2)');
+          if (compBrand) compBrand.textContent = compName;
+
+          if (errBanner) errBanner.style.display = 'none';
+          closeModal('register-modal');
+          showToast(`Company "${compName}" registered successfully!`, 'success');
+          switchRole('employer');
+        }
+      }
+
+      function filterLandingJobs() {
+        const query = (document.getElementById('landing-search-input')?.value || '').toLowerCase();
+        const dept = document.getElementById('landing-dept-filter')?.value || 'All';
+        const type = document.getElementById('landing-type-filter')?.value || 'All';
+
+        const filtered = DATA_JOBS.filter(j => {
+          const matchesQuery = !query || 
+            j.title.toLowerCase().includes(query) || 
+            j.company.toLowerCase().includes(query) || 
+            j.skills.some(s => s.toLowerCase().includes(query));
+          const matchesDept = dept === 'All' || j.department === dept;
+          const matchesType = type === 'All' || j.type === type;
+          return matchesQuery && matchesDept && matchesType;
+        });
+
+        const grid = document.getElementById('landing-jobs-grid');
+        if (!grid) return;
+        grid.innerHTML = filtered.map(j => `
+          <article class="job-card">
+            <div>
+              <div class="card-top">
+                <span class="badge ${j.type === 'Internship' ? 'badge-blue' : 'badge-orange'}">${j.type}</span>
+                <span class="badge badge-gray">${j.department}</span>
+              </div>
+              <h3 class="job-title">${j.title}</h3>
+              <div class="company-name">${j.company}</div>
+              <p style="font-size: 0.8125rem; color: var(--slate-500); margin: 0.5rem 0;">📍 ${j.location}</p>
+              <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.5;">${j.description}</p>
+            </div>
+            <div class="card-footer">
+              <span style="font-weight: 800;">${j.salary}</span>
+              <button type="button" class="btn btn-primary" style="padding: 0.4rem 0.875rem; font-size: 0.75rem;" onclick="applyFromLanding(${j.id})">
+                Apply Now
+              </button>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      function resetLandingFilters() {
+        document.getElementById('landing-search-input').value = '';
+        document.getElementById('landing-dept-filter').value = 'All';
+        document.getElementById('landing-type-filter').value = 'All';
+        renderLanding();
+      }
+
+      window.addEventListener('load', () => {
+        renderLanding();
+        const hash = window.location.hash.toLowerCase();
+        if (hash.includes('student')) switchRole('student');
+        else if (hash.includes('employer')) switchRole('employer');
+        else if (hash.includes('admin')) switchRole('admin');
+      });
+    </script>
+  </body>
+</html>

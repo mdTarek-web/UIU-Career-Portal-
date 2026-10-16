@@ -1,0 +1,8 @@
+{
+  "name": "UIU career Portal",
+  "description": "Official career services, internship placement, and employer engagement portal for United International University.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

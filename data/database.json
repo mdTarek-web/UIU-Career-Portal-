@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "id": "u-admin",
+      "email": "career.services@uiu.ac.bd",
+      "passwordHash": "demo1234",
+      "role": "admin",
+      "name": "Dr. Sarah Jenkins",
+      "status": "active",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "u-admin-2",
+      "email": "admin@uiu.ac.bd",
+      "passwordHash": "admin",
+      "role": "admin",
+      "name": "UIU Placement Officer",
+      "status": "active",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "u-student-1",
+      "email": "mugdha.rahman@uiu.edu.bd",
+      "passwordHash": "demo1234",
+      "role": "student",
+      "name": "Mugdha Rahman",
+      "status": "active",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "u-student-2",
+      "email": "student@uiu.ac.bd",
+      "passwordHash": "uiu",
+      "role": "student",
+      "name": "UIU Student Candidate",
+      "status": "active",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "u-employer-1",
+      "email": "s.jenkins@techflow.io",
+      "passwordHash": "demo1234",
+      "role": "employer",
+      "name": "TechFlow Solutions Recruiter",
+      "status": "active",
+      "createdAt": "2026-01-01"
+    }
+  ],
+  "jobs": [],
+  "companies": [],
+  "applications": [],
+  "chatThreads": [],
+  "offerLetters": [],
+  "placementRecords": [],
+  "shortlistedCandidates": [],
+  "resume": {
+    "fullName": "Mugdha Rahman",
+    "email": "mugdha.rahman@uiu.edu.bd",
+    "phone": "+880 1712 345678",
+    "degree": "B.Sc. in Computer Science and Engineering (CSE)",
+    "university": "United International University (UIU)",
+    "cgpa": "3.75",
+    "cgpaMax": "4.00",
+    "skills": ["C++", "Java", "Python", "React.js", "SQL", "Data Structures", "Git", "HTML/CSS", "Tailwind", "REST APIs"],
+    "projects": [
+      {
+        "id": "p1",
+        "title": "UIU Student Portal & Job Hub",
+        "tech": "React, TypeScript, Tailwind, REST API",
+        "description": "Built a full-featured university career and placement portal with role-based dashboards for students, recruiters, and placement officers."
+      }
+    ],
+    "certifications": ["AWS Cloud Practitioner Certified", "Google Cloud Certified Associate"],
+    "template": "classic"
+  },
+  "settings": {
+    "institutionName": "United International University (UIU)",
+    "institutionType": "Private Research University",
+    "campusAddress": "United City, Madani Avenue, Badda, Dhaka 1212, Bangladesh",
+    "careerEmail": "careerportal@uiu.ac.bd",
+    "officialPhone": "+880 2 54698846",
+    "newEmployerAlerts": true,
+    "jobApprovalAlerts": true,
+    "weeklyReportAlerts": false
+  }
+}
